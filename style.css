@@ -37,7 +37,7 @@ background-color: #f2d508;
   flex-wrap : wrap;
 }
 .conv-item {
-  width:90px;
+  width:100px;
   margin : 0.25rem;
   display : flex;
   align-items : center; 
