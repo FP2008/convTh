@@ -18,6 +18,6 @@ function convTh(e){
   }
   else if(id == "df"){
     Th.value = (valeur - 32 ) / 1.8 / 30;
-    dc.value = (valeur - 32 ) /1.8;
+    dc.value = (valeur - 32 ) / 1.8;
   }
 }
