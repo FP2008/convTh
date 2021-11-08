@@ -24,11 +24,8 @@ input, button {
 }
 button[type="reset"] {
 background-color: #f2d508; 
-}  
-.form-group{
-  display: inline-block;
-  padding: 5px;
-}
+} 
+
 .conv-container {
   display : flex;
   width:100%;
@@ -36,18 +33,21 @@ background-color: #f2d508;
   margin-right :  auto;
   flex-wrap : wrap;
 }
+
 .conv-item {
-  width:110px;
+  width:100px;
   margin : 0.25rem;
   display : flex;
   align-items : center; 
 }
+
 .raz {
   width:80px;
   margin : 0.25rem;
   display : flex;
   align-items : center; 
 }
+
 .conv-item > label, .raz > label  {
   width:40px;
   text-align : center;
