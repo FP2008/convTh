@@ -1,11 +1,10 @@
 body{
   font-family: 'Poppins';
 }
-input, button {
-  cursor: pointer !important;
+input {
+  cursor: pointer;
   text-align:center;
   outline : true;
-  cursor: help;
   display: block;
   width: 100%;
   padding: .375rem .75rem; /*1rem = 16 px par défaut*/
@@ -22,6 +21,33 @@ input, button {
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box- shadow .15s ease-in-out;
 }
+
+input:focus {
+  outline: none !important;
+  border-color: #f2d508;
+}
+
+button {
+  cursor: pointer;
+  text-align:center;
+  outline : true;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem; /*1rem = 16 px par défaut*/
+  font-size: 1rem;
+  font-weight : bold;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box- shadow .15s ease- in-out;
+}
+
 button[type="reset"] {
 background-color: #f2d508; 
 } 
