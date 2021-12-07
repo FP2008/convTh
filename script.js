@@ -13,23 +13,32 @@ function testValue(value) {
   }
 }
 
+function round(value, step) {
+  step || (step = 1.0);
+  inv = 1.0 / step;
+  return Math.round(value * inv) / inv;
+}
+
 function convTh(e){
   //définir id comme une constante non modifiable
   //e = event de l'input
   id = e.target.id;
-  valeur = e.target.value;
+  valeur = parseFloat(e.target.value);
   testValue(valeur);
   
   if(id == "Th"){
-    dc.value = valeur * 30;
-    df.value = valeur * 30 * 1.8 + 32
+    Th.value = valeur;
+    dc.value = round(valeur * 30, 1.0);
+    df.value = round(valeur * 30 * 1.8 + 32, 1.0);
   } else if(id == "dc"){
-    Th.value = valeur / 30;
-    df.value = valeur * 1.8 + 32;
+      Th.value = round(valeur / 30, 0.5);
+      dc.value = valeur;
+      df.value = round(valeur * 1.8 + 32, 1.0);
     }
     else if(id == "df"){
-      Th.value = (valeur - 32 ) / 1.8 / 30;
-      dc.value = (valeur - 32 ) /1.8;
+      Th.value = round((valeur - 32 ) / 1.8 / 30, 1.0);
+      dc.value = round((valeur - 32 ) /1.8, 1.0);
+      df.value = valeur;
     }
     else if(id == "raz") {
       document.getElementById("myForm").reset();
