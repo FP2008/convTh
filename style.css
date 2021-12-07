@@ -1,8 +1,10 @@
+/* f.poirrier */
 body{
   font-family: 'Poppins';
 }
-input {
-  cursor: pointer;
+
+input, select {
+  cursor: pointer !important;
   text-align:center;
   outline : true;
   display: block;
@@ -19,38 +21,24 @@ input {
   -moz-appearance: none;
   appearance: none;
   border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box- shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box- shadow .15s ease- in-out;
 }
+
 
 input:focus {
   outline: none !important;
   border-color: #f2d508;
 }
 
-button {
-  cursor: pointer;
-  text-align:center;
-  outline : true;
-  display: block;
-  width: 100%;
-  padding: .375rem .75rem; /*1rem = 16 px par défaut*/
-  font-size: 1rem;
-  font-weight : bold;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 0px solid #ced4da;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out,box- shadow .15s ease- in-out;
+input[type="button"] {
+  background-color: #f2d508;
+  border: 0px;
 }
 
-button[type="reset"] {
-background-color: #f2d508; 
-} 
+#raz:active {
+  background-color: #efe5a2;
+  color: #ced4da;
+}
 
 .conv-container {
   display : flex;
@@ -61,21 +49,27 @@ background-color: #f2d508;
 }
 
 .conv-item {
-  width:113px;
+  width:100px;
   margin : 0.25rem;
   display : flex;
   align-items : center; 
 }
 
 .raz {
-  width:80px;
+  width:50px;
   margin : 0.25rem;
   display : flex;
   align-items : center; 
 }
 
-.conv-item > label, .raz > label  {
+.conv-item > label, .raz > label{
   width:40px;
+  text-align : center;
+  margin-right : 0.3rem;
+}
+
+.ing-item > label {
+  width:120px;
   text-align : center;
   margin-right : 0.3rem;
 }
