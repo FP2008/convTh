@@ -20,7 +20,6 @@ function round(value, step) {
 }
 
 function convTh(e){
-  //définir id comme une constante non modifiable
   //e = event de l'input
   id = e.target.id;
   valeur = parseFloat(e.target.value);
